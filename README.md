@@ -1,16 +1,61 @@
-# React + Vite
+# 🌳 JSON Tree Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based **JSON Tree Visualizer** built for the **APIWiz Frontend Assignment**.  
+This application lets users paste any JSON input and visualize it as an **interactive, color-coded tree structure**.  
+It also includes **search**, **dark mode**, **download as image**, and **reset** features.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+### 🧠 Core Functionalities
+- **JSON Input:** Paste your JSON in the input box and visualize instantly.
+- **Tree Visualization:** Each node represents a key/value or nested object.
+- **Color-coded Nodes:**  
+  - 🟦 Objects → Blue  
+  - 🟩 Arrays → Green  
+  - 🟨 Primitive values → Yellow
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔍 Search Functionality (Mandatory)
+- Supports **JSON path-based search** (e.g.,  
+  - `$.user.name`  
+  - `$.user.address.city`  
+  - `$.user.items[0].name`)
+- Highlights the **matching node** in green.
+- Displays “✅ Match found” or “❌ No match found” message.
+- Automatically pans to the matched node for better visibility.
 
-## Expanding the ESLint configuration
+### 💡 Additional Features
+- 🌙 **Dark/Light Mode Toggle**
+- ♻️ **Reset JSON Tree**
+- 📋 **Click-to-copy** JSON path
+- 📸 **Download Tree as Image (PNG)**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧩 Tech Stack
+
+| Technology | Description |
+|-------------|-------------|
+| **React + Vite** | Fast modern frontend setup |
+| **React Flow** | Interactive tree/graph rendering |
+| **Tailwind CSS** | Modern utility-first styling |
+| **html-to-image** | Converts the React Flow tree to PNG |
+| **PostCSS** | CSS processing for Tailwind |
+
+---
+
+## ⚙️ Installation & Setup
+
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/GunjanTiwari-web/json-tree-visualizer.git
+
+# 2️⃣ Navigate to the project
+cd json-tree-visualizer
+
+# 3️⃣ Install dependencies
+npm install
+
+# 4️⃣ Run locally
+npm run dev
